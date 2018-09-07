@@ -1,0 +1,10 @@
+<h1>
+  Peliculas
+  <small>
+    Marvel DC
+  </small>
+</h1>
+<hr>
+<div class="card-columns">
+  <app-pelicula-tarjeta (peliculaSeleccionado)=" verPelicula( $event ) " [pelicula]="pelicula" [index]=" pelicula.imdbID " *ngFor="let pelicula of peliculas"></app-pelicula-tarjeta>
+</div>

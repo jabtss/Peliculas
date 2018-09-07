@@ -1,0 +1,18 @@
+<h1>
+  Buscador : {{termino}}
+</h1>
+<hr>
+
+<div class="row" *ngIf="peliculas.length == 0">
+  <div class="col-md-12">
+    <div class="alert alert-info" role="alert">
+        no existen resultados : {{termino}}
+    </div>
+  </div>
+</div>
+
+<div class="card-columns">
+
+    <app-pelicula-tarjeta (peliculaSeleccionado)=" verPelicula( $event ) "   [pelicula]="pelicula" [index]="pelicula.imdbID" *ngFor="let pelicula of peliculas; let i = index"></app-pelicula-tarjeta>
+
+</div>
